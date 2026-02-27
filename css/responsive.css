@@ -225,6 +225,10 @@
     letter-spacing: 0.04em !important;
   }
 
+  .hero__action--mobile-only {
+    display: inline-flex !important;
+  }
+
   /* Feature cards — стандартный вид */
   .features-bar {
     grid-template-columns: 1fr;
