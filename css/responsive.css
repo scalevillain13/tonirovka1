@@ -210,8 +210,8 @@
     letter-spacing: 0.06em !important;
     text-transform: uppercase !important;
     justify-content: center;
-    background-color: var(--color-primary) !important;
-    border-color: var(--color-primary) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
     color: #ffffff !important;
     box-shadow: none !important;
   }
