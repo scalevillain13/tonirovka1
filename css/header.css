@@ -146,6 +146,13 @@
   height: 18px;
 }
 
+/* Header CTA — компактнее телефона и иконки */
+.header__cta {
+  padding: 0.45rem 0.85rem;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
 /* Burger button */
 .burger {
   display: none;
