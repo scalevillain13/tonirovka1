@@ -1,0 +1,310 @@
+/* ===== 2K / LARGE DESKTOP: ≥ 1920px ===== */
+@media (min-width: 1920px) {
+  :root {
+    --container-max: 1320px;
+  }
+
+  .container {
+    padding-left: var(--spacing-3xl);
+    padding-right: var(--spacing-3xl);
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --container-max: 1440px;
+    --spacing-4xl: 5rem;
+  }
+
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* ===== TABLET: ≤ 1024px ===== */
+@media (max-width: 1024px) {
+  :root {
+    --spacing-4xl: 4rem;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-bottom: var(--spacing-3xl);
+  }
+
+  .films-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .applications__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator__hint {
+    position: static;
+  }
+
+  .contacts__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-cta__inner {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .footer-cta__image {
+    display: none;
+  }
+
+  .specialist__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-calc__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-calc__image {
+    display: none;
+  }
+}
+
+/* ===== MOBILE: ≤ 768px ===== */
+@media (max-width: 768px) {
+  :root {
+    --spacing-4xl: 3rem;
+    --spacing-3xl: 2.5rem;
+  }
+
+  .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  /* Header */
+  .nav,
+  .header__phone,
+  .header__telegram,
+  .header__cta {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  /* ── Hero мобильный ────────────────────────────────────────── */
+  .hero {
+    min-height: 100svh;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .hero::before {
+    filter: blur(1px) brightness(0.55);
+  }
+
+  .hero__inner {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    flex: 1;
+  }
+
+  .hero__content--full {
+    max-width: 100%;
+  }
+
+  .hero__badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.7rem;
+    align-self: flex-start;
+  }
+
+  .hero__title {
+    font-size: clamp(1.75rem, 7vw, 2.25rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
+  }
+
+  .hero__tagline {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #22d3ee;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero__stats {
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .hero__stat-num {
+    font-size: 1.1rem;
+  }
+
+  .hero__list {
+    margin-bottom: var(--spacing-md);
+    gap: 0.4rem;
+  }
+
+  .hero__list li {
+    font-size: 0.9rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-md);
+  }
+
+  .hero .btn--primary {
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    color: #ffffff !important;
+  }
+
+  .hero .btn--outline {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Feature cards — стандартный вид */
+  .features-bar {
+    grid-template-columns: 1fr;
+    margin-top: var(--spacing-xl);
+  }
+
+  /* Sections */
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .films-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calc-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calc-options--3,
+  .calc-options--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calc-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-cta__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about__services {
+    gap: var(--spacing-sm);
+  }
+
+  .site-footer__inner {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+}
+
+/* ===== SMALL MOBILE: ≤ 480px ===== */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-options {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__stats {
+    gap: var(--spacing-sm);
+  }
+
+  .photo-calc__form-card {
+    padding: var(--spacing-lg);
+  }
+
+  .footer-form {
+    padding: var(--spacing-lg);
+  }
+
+  .calculator__panel {
+    border-radius: var(--radius-lg);
+  }
+
+  .calc-step {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}

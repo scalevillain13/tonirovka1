@@ -1,0 +1,270 @@
+/* ===== SERVICE TILES (Что оклеиваем) ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.service-tile {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.service-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.service-tile__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-tile:hover .service-tile__img {
+  transform: scale(1.06);
+}
+
+.service-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.75) 0%, transparent 55%);
+  transition: background var(--transition-base);
+}
+
+.service-tile:hover .service-tile__overlay {
+  background: linear-gradient(to top, rgba(8, 145, 178, 0.8) 0%, rgba(15, 23, 42, 0.3) 70%);
+}
+
+.service-tile__label {
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-white);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* ===== FILM TYPE CARDS (Виды плёнок) ===== */
+.films-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.film-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.film-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+}
+
+.film-card__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.film-card__img--scale {
+  object-fit: contain;
+  object-position: center;
+  transform: scale(0.92);
+}
+
+.film-card__body {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.film-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.film-card__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: var(--spacing-lg);
+}
+
+.film-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-primary-bg);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  margin-top: auto;
+}
+
+.film-card__btn:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.film-card__btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ===== CASE / PORTFOLIO CARDS (Наши работы) ===== */
+.cases-wrapper {
+  overflow: hidden;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.case-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.case-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.case-card__img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+}
+
+.case-card__body {
+  padding: var(--spacing-lg);
+}
+
+.case-card__title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.case-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.case-meta-item {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.case-meta-item__label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.65rem;
+}
+
+.case-meta-item__value {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.case-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: gap var(--transition-fast);
+}
+
+.case-card__link:hover {
+  gap: var(--spacing-sm);
+}
+
+.case-card__link svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== WHY US CARDS (Наши преимущества) ===== */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.advantage-card {
+  background: var(--color-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: background-color var(--transition-base), transform var(--transition-fast);
+}
+
+.advantage-card:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.advantage-card__icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantage-card__icon svg {
+  width: 22px;
+  height: 22px;
+  color: white;
+}
+
+.advantage-card__text {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: white;
+  line-height: 1.4;
+}
