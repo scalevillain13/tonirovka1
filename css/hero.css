@@ -25,6 +25,11 @@
   display: none;
 }
 
+/* Кнопка «Вызвать замерщика» — только на мобилке */
+.hero__action--mobile-only {
+  display: none;
+}
+
 .hero__inner {
   display: grid;
   grid-template-columns: 1fr;
