@@ -195,6 +195,15 @@
   margin-bottom: var(--spacing-lg);
 }
 
+.photo-calc__consent {
+  align-items: flex-start;
+  line-height: 1.35;
+}
+
+.photo-calc__consent input[type="checkbox"] {
+  margin-top: 0.1rem;
+}
+
 /* ===== FOOTER CTA FORM ===== */
 .footer-form__fields {
   display: flex;
