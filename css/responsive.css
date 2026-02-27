@@ -119,6 +119,7 @@
   /* ── Hero мобильный ────────────────────────────────────────── */
   .hero {
     min-height: 100svh;
+    padding-top: calc(var(--header-height) + 0.5rem);
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -131,22 +132,29 @@
   }
 
   .hero__inner {
-    padding-top: var(--spacing-lg);
-    padding-bottom: var(--spacing-xl);
+    padding-top: 0;
+    padding-bottom: var(--spacing-md);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: 0;
     flex: 1;
+    justify-content: space-between;
   }
 
   .hero__content--full {
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+    justify-content: center;
   }
 
   .hero__badge {
     font-size: 0.75rem;
     padding: 0.25rem 0.7rem;
     align-self: flex-start;
+    margin-bottom: 0;
   }
 
   .hero__title {
@@ -155,6 +163,7 @@
     text-transform: uppercase;
     letter-spacing: -0.01em;
     line-height: 1.05;
+    margin-bottom: 0;
   }
 
   .hero__tagline {
@@ -163,14 +172,14 @@
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: #22d3ee;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0;
   }
 
   .hero__stats {
     gap: var(--spacing-md);
     flex-wrap: wrap;
-    padding-bottom: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0;
   }
 
   .hero__stat-num {
@@ -178,8 +187,8 @@
   }
 
   .hero__list {
-    margin-bottom: var(--spacing-md);
-    gap: 0.4rem;
+    margin-bottom: 0;
+    gap: 0.35rem;
   }
 
   .hero__list li {
@@ -189,26 +198,32 @@
   .hero__actions {
     flex-direction: column;
     align-items: stretch;
-    gap: var(--spacing-md);
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
   }
 
   .hero .btn--primary {
-    padding: 1rem !important;
-    font-size: 1rem !important;
+    padding: 1.1rem !important;
+    font-size: 1.05rem !important;
     font-weight: 700 !important;
     letter-spacing: 0.06em !important;
     text-transform: uppercase !important;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.12) !important;
-    border-color: rgba(255, 255, 255, 0.7) !important;
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
     color: #ffffff !important;
+    box-shadow: none !important;
   }
 
   .hero .btn--outline {
-    padding: 0.75rem 1rem !important;
-    font-size: 0.95rem !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
     text-align: center;
     justify-content: center;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
   }
 
   /* Feature cards — стандартный вид */
